@@ -4,6 +4,22 @@ vim.api.nvim_set_keymap('n', '<C-g>', ':Telescope live_grep<CR>', { noremap = tr
 -- Custom key mapping for :Telescope find_files
 vim.api.nvim_set_keymap('n', '<C-f>', ':Telescope find_files<CR>', { noremap = true, silent = true })
 
+--jump half page and central focus with zz)
+vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
+
+
+--jump half page up and central focus with zz)
+vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
+
+-- search jumping centralize
+vim.api.nvim_set_keymap('n', 'n', 'nzz', { noremap = true, silent = true })
+
+
+-- search jumping centralize backwards
+vim.api.nvim_set_keymap('n', 'N', 'Nzz', { noremap = true, silent = true })
+
+
+
 require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
@@ -25,7 +41,7 @@ end
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/nvim-cmp'
-
+	use 'ThePrimeagen/vim-be-good'
 	use 'airblade/vim-gitgutter'
 	use {
   		'nvim-lualine/lualine.nvim',
